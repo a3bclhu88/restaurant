@@ -1,0 +1,12 @@
+{%extends 'posts/layout.html'%}
+
+{%block content%}
+
+<h1>hello from index html {{title}}<h1>
+<ul class = "collection">
+ {% for post in posts %}
+ 	<li class="collection-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
+ 	
+ {%	endfor %}
+</ul>
+{% endblock %}
